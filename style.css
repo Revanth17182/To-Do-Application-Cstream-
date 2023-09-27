@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ecaf05;
+    padding: 10px;
+}
+
+.todo{
+    width: 100%; 
+    max-width: 540px;
+    background: rgb(10, 206, 255);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo h2 {
+    position: relative;
+    display: inline-block;
+  }
+
+.todo h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    width: 15%;
+    height: 2px;
+    background-color: rgb(170, 155, 155);
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.todo h2:hover::after {
+    transform: scaleX(1);
+}
+
+.todo h2{
+    color: rgb(170, 155, 155);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.inp{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #dab0da;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 20px;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 15px 40px;
+    background-color: rgb(72, 172, 72);
+    color: rgb(92, 226, 233);
+    font: 16px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+ul li{
+    list-style: none;
+    font-size: 16px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    background-image: url(To-Do-master/images/Incomplete.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 8px;
+}
+
+ul li.check{
+    color: #8d8c8c;
+    text-decoration: line-through;
+}
+
+ul li.check::before{
+    background-image: url(To-Do-master/images/Completed.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background-color: #ffffff;
+}
+
+ul li::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; 
+    width: 92%;
+    height: 2px;
+    background-color: rgb(5, 247, 227);
+    transform: scaleY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+ul li:hover::after {
+    transform: scaleY(1);
+}
